@@ -1,6 +1,6 @@
-# EESchema Netlist Version 1.1 created  2/5/2013 12:09:54 AM
+# EESchema Netlist Version 1.1 created  4/5/2013 8:01:17 PM
 (
- ( /5109CB01 $noname  JP1 Interlaced {Lib=JUMPER}
+ ( /5109CB01 $noname  JP1 HSYNC_SEL {Lib=JUMPER}
   (    1 N-000162 )
   (    2 GND )
  )
