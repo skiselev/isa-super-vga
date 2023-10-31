@@ -43,3 +43,22 @@ Crystal            | X1        | 40 MHz                                         
 IC Socket          | U2        | 28 pin 600 mil (wide) DIP socket                          | 1        | Mouser 517-4828-6000-CP
 IC Socket          | U3 - U6   | 20 pin 300 mil (narrow) DIP socket                        | 4        | Mouser 517-4820-3000-CP
 Bracket            |           | ISA card bracket - Keystone 9200-1                        | 1        | Mouser 534-9200-1
+
+## Changes
+
+### Version 1.1
+
+* Fix ALE errata. ALE signal is now connected to 5V
+* Slightly move VGA DE-9F connector (about 1.27 mm up and 0.8 mm back) to better comply with ISA card size and bracket placement specifications
+
+### Version 1.0
+
+* Minor board modifications around JP1
+
+## Errata
+
+### Version 1.0
+
+* The original IBM PC, the original IBM XT, and XT clones that closely follow IBM XT schematic do not implement the ALE signal properly. In these computers the ALE signal occasionally activated during DMA cycles, for example during memory refresh, while the address on the address bus is invalid. This confuses the Trident TVGA controller. The following rework is required to make ISA Super VGA work in these computers: The TVGA9000 ALE signal needs to be disconnected from the ISA ALE signal, and connected to the 5V power signal. The photo below shows such modification (photo credit: [keropi](https://forum.vcfed.org/index.php?members/keropi.23086/) at [VCFed forum](https://forum.vcfed.org/index.php)).
+
+![ISA SVGA ALE Fix](images/ISA_SVGA-ALE_Fix-800px.jpg)
