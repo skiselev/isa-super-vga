@@ -15,7 +15,15 @@ Note: PCB Version 1.0 requires a rework for compatibility with the original IBM 
 * 8088-friendly VGA BIOS.
 * Only 6 ICs (SVGA IC, BIOS, four DRAM chips), some capacitors, resistors and inductors.
 
-## Bill of Materials
+## Hardware Documentation
+
+### Schematic and PCB Layout
+
+[Schematic - Version 1.1](KiCad/ISA_SVGA-Schematic-1.1.pdf)
+
+[PCB Layout - Version 1.1](KiCad/ISA_SVGA-Board-1.1.pdf)
+
+### Bill of Materials
 
 Component Type     | Reference | Description                                               | Quantity | Possible sources and notes
 ------------------ | --------- | --------------------------------------------------------- | -------- | --------------------------
@@ -44,6 +52,12 @@ IC Socket          | U2        | 28 pin 600 mil (wide) DIP socket               
 IC Socket          | U3 - U6   | 20 pin 300 mil (narrow) DIP socket                        | 4        | Mouser 517-4820-3000-CP
 Bracket            |           | ISA card bracket - Keystone 9200-1                        | 1        | Mouser 534-9200-1
 
+### Construction Notes
+
+#### Display Type Detection
+
+* TVGA9000i VGA controller uses VGA connector pin 12 as **MONITOR** signal to detect the of type of the display. Older, pre-[DDC](https://en.wikipedia.org/wiki/Display_Data_Channel) displays made approximately until 1995, have that signal either unconnected - for color monitors, or grounded - for monochrome monitors. Newer displays use that signal as the DDC/SDA signal. Unfortunately, it can result in TVGA9000i incorrectly detecting the monitor as monochrome. If you're not planning to use monochrome monitor, you can skip FB6 and C17 components. In this case R6 will be pulling the MONITOR signal up, and TVGA9000i will detect the display as a color one.
+
 ## Changes
 
 ### Version 1.1
@@ -57,8 +71,13 @@ Bracket            |           | ISA card bracket - Keystone 9200-1             
 
 ## Errata
 
+### Version 1.1
+* C17 is incorrectly marked as 1 uF on the silkscreen. The correct value is 1 nF, as shown in the BoM. Also see **Display Type Detection** note above.
+
 ### Version 1.0
 
 * The original IBM PC, the original IBM XT, and XT clones that closely follow IBM XT schematic do not implement the ALE signal properly. In these computers the ALE signal occasionally activated during DMA cycles, for example during memory refresh, while the address on the address bus is invalid. This confuses the Trident TVGA controller. The following rework is required to make ISA Super VGA work in these computers: The TVGA9000 ALE signal needs to be disconnected from the ISA ALE signal, and connected to the 5V power signal. The photo below shows such modification (photo credit: [keropi](https://forum.vcfed.org/index.php?members/keropi.23086/) at [VCFed forum](https://forum.vcfed.org/index.php)).
 
 ![ISA SVGA ALE Fix](images/ISA_SVGA-ALE_Fix-800px.jpg)
+
+
