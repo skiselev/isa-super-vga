@@ -50,7 +50,7 @@ Filter             | FB1 - FB6 | EMI Filter Bead                                
 Crystal            | X1        | 40 MHz                                                    | 1        | Mouser 815-ABL-40-B2
 IC Socket          | U2        | 28 pin 600 mil (wide) DIP socket                          | 1        | Mouser 517-4828-6000-CP
 IC Socket          | U3 - U6   | 20 pin 300 mil (narrow) DIP socket                        | 4        | Mouser 517-4820-3000-CP
-Bracket            |           | ISA card bracket - Keystone 9200-1                        | 1        | Mouser 534-9200-1
+Bracket            |           | ISA card bracket - Keystone 9200-1                        | 1        | Mouser 534-9200-1, or a [3D printed bracket](https://www.thingiverse.com/thing:6473572)
 
 ### Construction Notes
 
