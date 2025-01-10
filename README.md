@@ -31,12 +31,12 @@ PCB                |           | ISA Super VGA PCB                              
 Integrated Circuit | U1        | Trident TVGA9000i-3                                       | 1        | Utsource or other component dealers. Other TVGA9000i versions can be used (e.g. TVGA9000i-1)
 Integrated Circuit | U2        | 27C256 UV erasable EPROM or OTP ROM                       | 1        | Unicorn Electronics, Jameco, Mouser (OTP ROM)
 Integrated Circuit | U3 - U6   | Micron MT4C4256, Motorola MCM514256, or similar 256 Kbit x 4 DRAM, 70ns or less | 2 or 4 | Unicorn Electronics. Install 4 for the total memory of 512 KiB or two for 256 KiB.
-Capacitor          | C1 - C12  | 0.1 uF ceramic, 5.08 mm pitch                             | 12       | Mouser 810-FK28X7R1H104K
-Capacitor          | C13 - C16 | 10 uF, 16V, multilayer ceramic or tantalum, 5.08 mm pitch | 4        | Mouser 810-FK24X5R1C106K
-Capacitor          | C17       | 1 nF ceramic, 5.08 mm pitch                               | 1        | Mouser 810-FK28C0G2A102J
-Capacitor          | C18       | 470 pF ceramic, 5.08 mm pitch                             | 1        | Mouser 810-FK28C0G1H471J
-Capacitor          | C19       | 100 pF ceramic, 5.08 mm pitch                             | 1        | Mouser 810-FK28C0G1H101J
-Capacitor          | C20 - C27 | 47 pF ceramic, 5.08 mm pitch                              | 8        | Mouser 810-FK28C0G1H470J
+Capacitor          | C1 - C12  | 0.1 uF ceramic, 5.08 mm pitch                             | 12       | Mouser 810-FG28X7R1H104KNT0 
+Capacitor          | C13 - C16 | 10 uF, 16V, multilayer ceramic or tantalum, 5.08 mm pitch | 4        | Mouser 810-FG26X7R1E106KRT0 
+Capacitor          | C17       | 1 nF ceramic, 5.08 mm pitch                               | 1        | Mouser 810-FG28C0G2A102JNT6
+Capacitor          | C18       | 470 pF ceramic, 5.08 mm pitch                             | 1        | Mouser 810-FG28C0G1H471JNT0 
+Capacitor          | C19       | 100 pF ceramic, 5.08 mm pitch                             | 1        | Mouser 810-FG28C0G1H101JNT0 
+Capacitor          | C20 - C27 | 47 pF ceramic, 5.08 mm pitch                              | 8        | Mouser 810-FG28C0G1H470JNT0
 Resistor           | R1 - R8   | 4.7 k, 1/4 W                                              | 8        | Mouser 291-4.7K-RC
 Resistor           | R9        | 1 k, 1/4 W                                                | 1        | Mouser 291-1K-RC
 Resistor           | R10 - R13 | 150 Ohm, 1/4 W                                            | 4        | Mouser 291-150-RC
