@@ -48,6 +48,7 @@ Inductor           | L1, L3    | 5.7 uH                                         
 Inductor           | L2        | 2.7 uH                                                    | 1        | Mouser 542-78F2R7-RC
 Filter             | FB1 - FB6 | EMI Filter Bead                                           | 6        | Mouser 623-2743001112LF
 Crystal            | X1        | 40 MHz                                                    | 1        | Mouser 815-ABL-40-B2
+Crystal Insulator  | X1        | Bivar CI-192-028-SR                                       | 1        | Mouser 749-CI-192-028-SR, optional, to prevent crystal from shortcircuiting the traces underneath it.
 IC Socket          | U2        | 28 pin 600 mil (wide) DIP socket                          | 1        | Mouser 517-4828-6000-CP
 IC Socket          | U3 - U6   | 20 pin 300 mil (narrow) DIP socket                        | 4        | Mouser 517-4820-3000-CP
 Bracket            |           | ISA card bracket - Keystone 9200-1                        | 1        | Mouser 534-9200-1, or a [3D printed bracket](https://www.thingiverse.com/thing:6473572)
